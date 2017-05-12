@@ -13,13 +13,13 @@ public class Main {
     public static void main(String[] args) {
         // Prints "Hello, World" to the terminal window.
         System.out.println("Hello, World");
-        Person person = new Person();
+        Person person1 = new Person("Bruno", 20);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/M/yyyy");
         String date = sdf.format(new Date());
         System.out.println(date);
 
-        Student student = new Student();
-        System.out.println(student.getStudentFileName());
+        Student student1 = new Student("Bruno", 23, 123, "543");
+        System.out.println(student1.getStudentFileName());
     }
 
 }
