@@ -20,4 +20,18 @@ public class Employee extends Person {
     public void setCompany(String company) {
         this.company = company;
     }
+
+    public void writeOutput() {
+        System.out.println("Name = " + getName());
+        System.out.println("Age = " + getAge());
+        System.out.println("Company Name = " + company);
+    }
+
+    @Override
+    public void print() {
+        super.print();
+        System.out.println(
+                String.format("Company Name: %s",
+                        this.company));
+    }
 }

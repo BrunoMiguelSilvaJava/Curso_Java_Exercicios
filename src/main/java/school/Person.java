@@ -16,6 +16,7 @@ public class Person {
         nPersons++;
         this.setName(name);
         this.setAge(age);
+        this.discount = age;
     }
 
     public String getName() {
@@ -38,11 +39,28 @@ public class Person {
         return nPersons;
     }
 
+    protected int getDoubleAge(){
+        return age*2;
+    }
+
     public int getDiscount() {
         return discount;
     }
 
     public void setDiscount(int discount) {
         this.discount = discount;
+    }
+
+    public void print(){
+        System.out.println(
+                String.format("Name: %s, Age: %d, Discount: %d",
+                        name,
+                        age,
+                        discount));
+    }
+
+    public void writeOutput(){
+        System.out.println("Name = " + name);
+        System.out.println("Age = " + age);
     }
 }

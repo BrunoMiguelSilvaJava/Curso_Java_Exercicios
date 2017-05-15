@@ -35,4 +35,20 @@ public class Student extends Person{
         studentNumber = 123;
         return studentNumber + getName();
     }
+
+    public void writeOutput() {
+        System.out.println("Name = " + getName());
+        System.out.println("Age = " + getAge());
+        System.out.println("Student Number = " + studentNumber);
+        System.out.println("School Name = " + schoolName);
+    }
+
+    @Override
+    public void print() {
+        super.print();
+        System.out.println(
+                String.format("Student Number: %d, School Name: %s",
+                        this.studentNumber,
+                        this.schoolName));
+    }
 }
